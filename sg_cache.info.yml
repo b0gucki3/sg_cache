@@ -2,5 +2,4 @@ name: 'sg_cache'
 type: module
 description: 'SiteGround Cache Flusher'
 core_version_requirement: ^8 || ^9
-package: Development
-
+package: Custom
