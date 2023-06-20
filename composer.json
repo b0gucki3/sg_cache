@@ -1,13 +1,9 @@
 {
-    "name": "b0gucki3/sg_cache",
+    "name": "drupal/sg_cache",
     "description": "SiteGround Cache Flusher",
+    "type": "drupal-module",
     "require": {
         "php": ">=7.4"
     },
-    "license": "MIT",
-    "extra": {
-        "installer-paths": {
-            "custom_modules/sg_cache": ["type:drupal-module"]
-        }
-    }
+    "license": "MIT"
 }
