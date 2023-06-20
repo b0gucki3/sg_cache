@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_rebuild().
+ */
+function sg_cache_rebuild()
+{
+  // curl -X PURGE -A "SiteGround Cache Flusher" 'http://127.0.0.1/*' -H "Host: example.com"
+
+  $hostname = $_SERVER['HTTP_HOST'];
+  $command = 'curl -X PURGE -A "SiteGround Cache Flusher" \'http://127.0.0.1/*\' -H "Host: ' . $hostname . '"';
+
+  // Execute the cURL command
+  exec($command, $output, $returnCode);
+
+  // Check the return code for success or failure
+  if ($returnCode === 0) {
+    // cURL command executed successfully
+    // Process the output if needed
+    \Drupal::logger('sg_cache')->notice('sg_cache run. $hostname: ' . $hostname);
+  } else {
+    // Error executing the cURL command
+    // Handle the error
+    \Drupal::logger('sg_cache')->error('Error executing cURL command. $hostname: ' . $hostname . ' ' . implode(PHP_EOL, $output));
+  }
+}

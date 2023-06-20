@@ -1,0 +1,8 @@
+{
+    "name": "b0gucki3/sg_cache",
+    "description": "SiteGround Cache Flusher",
+    "require": {
+        "php": ">=7.4"
+    },
+    "license": "MIT"
+}
