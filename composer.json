@@ -4,5 +4,10 @@
     "require": {
         "php": ">=7.4"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "extra": {
+        "installer-paths": {
+            "web/modules/contrib{$name}": ["vendor/package"]
+        }
+    }
 }
